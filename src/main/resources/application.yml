@@ -1,0 +1,18 @@
+spring:
+  application:
+    # 服务名称
+    name: spring-cloud-eureka-server
+
+server:
+  # 端口号
+  port: 8761
+
+eureka:
+  client:
+    service-url:
+      # 默认注册地址
+      defaultZone: http://localhost:${server.port}/eureka/
+    # 当前服务不注册到eureka
+    register-with-eureka: false
+    # 表示不去eurekaServer获取服务地址
+    fetch-registry: false
